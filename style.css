@@ -1,0 +1,414 @@
+@font-face {
+  font-family: 'Baskerville Normal';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Baskerville Normal'), url('fonte/baskvl.woff') format('woff');
+}
+
+/* Estilos globais */
+/* Estilos globais para toda a página */
+body {
+  font-family: Arial, sans-serif; /* Define a família da fonte para toda a página */
+  margin: 0; /* Remove a margem padrão ao redor do corpo (body) */
+  padding: 0; /* Remove o preenchimento padrão ao redor do corpo (body) */
+  background-color: #fde3f7; /* Define a cor de fundo para o corpo (body) */
+  font-size: 16px; /* Define o tamanho da fonte padrão para o corpo (body) */
+} 
+
+/* Cabeçalho */
+/* Estilos para a seção de cabeçalho */
+header {
+  background-color: #f8a8e0;
+  padding: 10px; /* Aumentei um pouco o preenchimento para desktop */
+  text-align: center;
+  color: #1f1e1e;
+  width: 100%;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+header h1 {
+  font-size: 28px;
+  font-family: 'Baskerville Normal', serif;
+}
+
+.logo {
+  margin-bottom: 20px;
+}
+
+.logo img {
+  width: 250px;
+  height: auto;
+}
+
+/* Títulos */
+/* Estilos para os títulos (h1, h2, etc.) */
+h1 {
+  font-size: 32px; /* Define o tamanho da fonte para todos os elementos h1 */
+  margin-bottom: 10px; /* Adiciona margem na parte inferior de todos os elementos h1 */
+}
+
+h2 {
+  color: #292828; /* Define a cor do texto para todos os elementos h2 */
+  margin: 0; /* Remove a margem ao redor de todos os elementos h2 */
+}
+h3{
+  font-family: 'Baskerville Normal', serif;
+}
+
+/* Parágrafos */
+/* Estilos para parágrafos (p) */
+p {
+  font-size: 20px; /* Define o tamanho da fonte para todos os elementos de parágrafo (p) */
+  margin-bottom: 20px; /* Adiciona margem na parte inferior de todos os parágrafos */
+  font-family: 'Baskerville Normal', serif;
+}
+
+/* Botão */
+/* Estilos para botões */
+.button:hover {
+  background-color: #f3c5d8; /* Define a cor de fundo quando passar o mouse sobre elementos com a classe "button" */
+}
+
+/* Produtos */
+/* Estilos para a seção de produtos */
+#products {
+  display: flex; /* Exibe os produtos como um contêiner flexível */
+  flex-wrap: wrap; /* Permite que os produtos sejam agrupados em várias linhas */
+  justify-content: space-between; /* Distribui os produtos uniformemente com espaço entre eles */
+  padding: 50px 150px; /* Adiciona preenchimento ao redor do contêiner de produtos */
+}
+#products .product:nth-last-child(-n+2) {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.product {
+  width: calc(33.33% - 10px); /* Define a largura de cada contêiner de produto */
+  background-color: #fcf1f9; /* Define a cor de fundo para cada contêiner de produto */
+  border-radius: 10px; /* Adiciona bordas arredondadas ao contêiner de produto */
+  padding: 10px; /* Adiciona preenchimento ao redor do conteúdo do produto */
+  margin: 10px 0; /* Adiciona margem na parte superior e inferior de cada contêiner de produto */
+  text-align: center; /* Alinha o conteúdo do produto ao centro */
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra ao contêiner de produto */
+}
+
+.product img {
+  width: 300px; /* Define a largura das imagens de produto */
+  height: 200px; /* Define a altura das imagens de produto */
+  object-fit: cover; /* Redimensiona as imagens de produto para cobrir todo o contêiner */
+  border-radius: 10px; /* Adiciona bordas arredondadas às imagens de produto */
+}
+
+.product h3 {
+  color: #292828; /* Define a cor do texto para os cabeçalhos de produto */
+    
+}
+
+.product p {
+  font-size: 14px; /* Define o tamanho da fonte para as descrições de produto */
+  color: #666; /* Define a cor do texto para as descrições de produto */
+  margin-bottom: 10px; /* Adiciona margem na parte inferior das descrições de produto */
+}
+
+.price {
+  font-weight: bold; /* Define a espessura da fonte como negrito para elementos com a classe "price" */
+  color: #333; /* Define a cor do texto para elementos com a classe "price" */
+}
+
+.detail {
+  font-size: 12px; /* Define o tamanho da fonte para elementos com a classe "detail" */
+  color: #999; /* Define a cor do texto para elementos com a classe "detail" */
+  margin-bottom: 10px; /* Adiciona margem na parte inferior dos elementos com a classe "detail" */
+}
+
+.buy-button {
+  display: inline-block; /* Exibe o botão como um elemento de bloco inline */
+  padding: 10px 20px; /* Adiciona preenchimento ao redor do conteúdo do botão */
+  background-color: #f8a8e0; /* Define a cor de fundo para o botão */
+  color: #292828; /* Define a cor do texto para o botão */
+  text-decoration: none; /* Remove o sublinhado do texto do botão */
+  border-radius: 5px; /* Adiciona bordas arredondadas ao botão */
+}
+
+.buy-button:hover {
+  background-color: #db6999; /* Define a cor de fundo quando passar o mouse sobre elementos com a classe "buy-button" */
+}
+
+/* Carrossel */
+/* Estilos para a seção de carrossel */
+.carousel-container {
+  overflow: hidden;
+}
+
+.carousel-inner {
+  padding: 10px;
+  width: 100%; /* Defina a largura para 100% para ocupar toda a largura da tela */
+  margin: 0; /* Remova as margens para ocupar toda a largura */
+}
+
+.carousel-item {
+  display: none; /* Inicialmente, oculte todos os slides */
+  position: relative;
+}
+
+.carousel-item.active {
+  display: block; /* Mostra apenas o slide ativo */
+}
+
+.carousel-item img {
+  max-width: 100%; /* Defina a largura máxima para 100% para que a imagem se ajuste à largura da tela */
+  height: auto; /* Deixe a altura ajustar automaticamente para manter a proporção */
+  object-fit: cover;
+  border-radius: 10px;
+}
+/* Botões de navegação transparentes inicialmente */
+.prev-button, .next-button {
+  opacity: 0.5; /* Opacidade inicial baixa */
+  transition: opacity 0.3s; /* Adicione uma transição suave para a mudança de opacidade */
+}
+
+/* Aumente a opacidade quando o mouse passar sobre os botões */
+.prev-button:hover, .next-button:hover {
+  opacity: 1; /* Opacidade total quando o mouse passar sobre eles */
+}
+
+
+
+
+
+
+
+
+
+
+
+.product-container {
+  max-width: 800px;
+  background-color: #fff;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.product-images {
+  text-align: center;
+  padding: 20px;
+}
+
+.product-images > * {
+  margin: auto;
+}
+.product-images img {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+.product-info {
+  flex: 1;
+  padding: 20px;
+}
+.product-info h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.product-price {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 20px;
+}
+.product-description {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+
+
+
+footer h1{
+  padding: 15px 10px;
+  font-size: 10px;
+  text-align: center;
+}
+
+/*-------------------------------------*/
+/* Define a classe para o contêiner que contém os detalhes do produto */
+.product-details {
+  display: flex; /* Aplica um layout flexível */
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  padding: 50px 550px; /* Ajuste o preenchimento conforme necessário */
+}
+
+/* Define a classe para o elemento que contém a imagem principal do produto */
+.product-image {
+  flex: 1; /* O elemento flexível ocupará espaço disponível */
+  text-align: center; /* Centraliza o conteúdo de texto horizontalmente */
+}
+
+/* Define a classe para a imagem principal do produto */
+.main-image {
+  width: 400px; /* Largura da imagem */
+  height: 400px; /* Altura da imagem */
+  object-fit: cover; /* Ajusta a imagem para cobrir o espaço */
+  border-radius: 10px; /* Borda arredondada */
+}
+/* Adicione estilos para o contêiner com fundo branco */
+.carousel-container-Pagina1 {
+  background-color: white;
+  position: relative;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 626px;
+  height: 600px;
+}
+#carouselExamplePagina1 {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.carousel-inner-pagina1 {
+  display: flex; /* Torna os slides flexíveis */
+}
+.carousel-item {
+  flex: 0 0 100%; /* Impede que os slides ocupem a largura total */
+}
+.carousel-inner-pagina1 img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.thumbnail-pagina1 {
+  width: 100px;
+  height: 70px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.thumbnail-pagina1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.thumbnail-container-pagina1 {
+  position: absolute;
+  bottom: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  background-color: rgba(230, 222, 222, 0.8);
+  padding: 5px;
+  border-radius: 5px;
+}
+
+/* Adicione estilos para a seção à direita */
+.right-section {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px auto; /* Espaço entre o carrossel e a seção à direita */
+  text-align: center;
+}
+
+
+
+
+/* Media Query para dispositivos com largura menor que 769px (dispositivos móveis) */
+@media screen and (max-width: 767px) {
+   
+  /* Utilizei um tamanho de fonte maior para facilitar a leitura em dispositivos móveis */
+  header h1 {
+    font-size: 18px;
+  }
+
+  header {
+    background-color: #f8a8e0;
+    padding: 10px; /* Ajustei o preenchimento para dispositivos móveis */
+    text-align: center;
+    color: #1f1e1e;
+    width: 100%;
+  }
+
+  .logo {
+    margin-bottom: 10px; /* Ajustei a margem para dispositivos móveis */
+  }
+
+  .logo img {
+    width: 160px;
+  }
+
+  p {
+    font-size: 14px; /* Altera o tamanho da fonte para parágrafos em dispositivos móveis */
+    margin-bottom: 5px; /* Altera a margem inferior para parágrafos em dispositivos móveis */
+  }
+  
+  .buy-button {
+    display: inline-block; /* Exibe o botão como um elemento de bloco inline */
+    padding: 6px 12px; /* Adiciona preenchimento ao redor do conteúdo do botão */
+    background-color: #f8a8e0; /* Define a cor de fundo para o botão */
+    color: #292828; /* Define a cor do texto para o botão */
+    text-decoration: none; /* Remove o sublinhado do texto do botão */
+    border-radius: 5px; /* Adiciona bordas arredondadas ao botão */
+    font-size: 14px;
+  }
+
+  .product h3 {
+    color: #292828; /* Define a cor do texto para cabeçalhos de produto em dispositivos móveis */
+    font-size: 15px; /* Altera o tamanho da fonte para cabeçalhos de produto em dispositivos móveis */
+  }
+
+  .price {
+    font-size: 15px; /* Altera o tamanho da fonte para preços em dispositivos móveis */
+    font-weight: bold; /* Define a espessura da fonte como negrito para preços em dispositivos móveis */
+    color: #333; /* Define a cor do texto para preços em dispositivos móveis */
+  }
+
+  #products {
+    padding: 5px 10px; /* Altera o preenchimento ao redor do contêiner de produtos em dispositivos móveis */
+  }
+
+  .product {
+    width: calc(50% - 10px); /* Define a largura dos contêineres de produto em dispositivos móveis */
+    padding: 10px; /* Adiciona preenchimento ao redor do conteúdo dos contêineres de produto em dispositivos móveis */
+    margin-bottom: 5px; /* Reduz o valor da margem inferior para diminuir o espaço entre os produtos em dispositivos móveis */
+  }
+
+  .product img {
+    width: 150px; /* Define a largura das imagens de produto em dispositivos móveis */
+    height: 100px; /* Ajusta a altura das imagens para corresponder ao tamanho das imagens do carrossel em dispositivos móveis */
+    object-fit: cover; /* Redimensiona as imagens de produto para cobrir todo o contêiner em dispositivos móveis */
+  }
+  .right-section {
+    margin-left: 10; /* Remova a margem à esquerda em dispositivos móveis */
+    max-width: 90%;
+    text-align: center;
+  }
+  .carousel-container-Pagina1 {
+    max-height: 350px;
+  }
+  .carousel-control-prev, .carousel-control-next {
+    /* Reduza o tamanho dos botões para dispositivos móveis */
+    width: 15px; /* Defina a largura desejada */
+    height: 15px; /* Defina a altura desejada */
+    font-size: 16px; /* Ajuste o tamanho da fonte, se necessário */
+    position: absolute;
+    top: 45%; /* Centralize verticalmente */ 
+  }
+  
+
+  /* Estilos específicos para desktops */
+  @media (min-width: 768px) {
+    .carousel-container {
+      height: 500px; /* Define a altura do carrossel em desktops */
+    }
+  }
+}
