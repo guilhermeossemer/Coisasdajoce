@@ -265,8 +265,8 @@ footer h1{
   position: relative;
   border-radius: 10px;
   padding: 20px;
-  max-width: 626px;
-  height: 600px;
+  max-width: 826px;
+  height: 660px;
 }
 #carouselExamplePagina1 {
   max-width: 100%;
@@ -315,8 +315,9 @@ footer h1{
   background-color: white;
   border-radius: 10px;
   padding: 20px;
-  margin: 20px auto; /* Espaço entre o carrossel e a seção à direita */
+  /*margin: 20px auto;  Espaço entre o carrossel e a seção à direita */
   text-align: center;
+  height: 300px;
 }
 
 
@@ -391,6 +392,8 @@ footer h1{
     margin-left: 10; /* Remova a margem à esquerda em dispositivos móveis */
     max-width: 90%;
     text-align: center;
+    margin: 20px auto;  /*Espaço entre o carrossel e a seção à direita */
+    height: 200px;
   }
   .carousel-container-Pagina1 {
     max-height: 350px;
